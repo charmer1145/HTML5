@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modern Login Form</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Arial, sans-serif;
+            background: linear-gradient(135deg, #00c6ff 0%, #ff0080 100%);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .login-box {
+            background: rgba(255,255,255,0.18);
+            width: 100%;
+            max-width: 370px;
+            padding: 40px 32px 32px 32px;
+            border-radius: 22px;
+            box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.18);
+            text-align: center;
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border: 1.5px solid rgba(255,255,255,0.24);
+            transition: 0.3s;
+            margin: 24px;
+        }
+        .avatar {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            margin-bottom: 20px;
+            border: 3px solid #00c6ff;
+            object-fit: cover;
+            box-shadow: 0 4px 16px #00c6ff44;
+            transition: 0.3s;
+        }
+        h2 {
+            margin-bottom: 20px;
+            color: #ff0080;
+            letter-spacing: 1px;
+            text-shadow: 0 2px 8px #00c6ff33;
+        }
+        .input-box {
+            margin: 15px 0;
+            position: relative;
+        }
+        .input-box input {
+            width: 100%;
+            padding: 12px 40px 12px 15px;
+            border: 2px solid #00c6ff;
+            border-radius: 10px;
+            font-size: 16px;
+            outline: none;
+            background: rgba(255,255,255,0.7);
+            transition: border-color 0.3s, box-shadow 0.3s;
+            box-sizing: border-box;
+        }
+        .input-box input:focus {
+            border-color: #ff0080;
+            box-shadow: 0 0 8px #ff008088;
+            background: #fff;
+        }
+        .btn {
+            width: 100%;
+            padding: 12px;
+            background: linear-gradient(90deg, #ff0080 0%, #00c6ff 100%);
+            border: none;
+            border-radius: 25px;
+            color: #fff;
+            font-size: 18px;
+            font-weight: 700;
+            cursor: pointer;
+            box-shadow: 0 4px 16px #00c6ff33;
+            margin-top: 10px;
+            letter-spacing: 1px;
+            transition: background 0.3s, transform 0.2s, box-shadow 0.3s;
+        }
+        .btn:hover {
+            background: linear-gradient(90deg, #00c6ff 0%, #ff0080 100%);
+            transform: translateY(-2px) scale(1.03);
+            box-shadow: 0 8px 24px #ff008044;
+        }
+        .extra-links {
+            margin-top: 15px;
+            font-size: 14px;
+        }
+        .extra-links a {
+            text-decoration: none;
+            color: #00c6ff;
+            font-weight: 600;
+            transition: 0.3s;
+        }
+        .extra-links a:hover {
+            text-decoration: underline;
+            color: #ff0080;
+        }
+        @media (max-width: 600px) {
+            body {
+                padding: 10px;
+            }
+            .login-box {
+                max-width: 98vw;
+                padding: 22px 8px 18px 8px;
+                border-radius: 16px;
+                margin: 0;
+            }
+            .avatar {
+                width: 60px;
+                height: 60px;
+            }
+            h2 {
+                font-size: 20px;
+            }
+            .btn {
+                font-size: 15px;
+                padding: 10px;
+            }
+            .input-box input {
+                font-size: 14px;
+                padding: 10px 30px 10px 10px;
+            }
+        }
+        @media (max-width: 350px) {
+            .login-box {
+                padding: 8px 2px 8px 2px;
+            }
+            .avatar {
+                width: 40px;
+                height: 40px;
+            }
+            h2 {
+                font-size: 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="login-box">
+        <img src="images/avatar.png" alt="avatar" class="avatar">
+        <h2>Login</h2>
+        <form>
+            <div class="input-box">
+                <input type="text" placeholder="Username" required>
+            </div>
+            <div class="input-box">
+                <input type="password" placeholder="Password" required>
+            </div>
+            <button type="submit" class="btn">Login</button>
+            <div class="extra-links">
+                <p><a href="#">Forgot Password?</a> | <a href="#">Sign Up</a></p>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
